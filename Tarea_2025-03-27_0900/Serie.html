@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h2>SERIE</h2>
+
+      <script>
+        let i;
+        let SERIE = [];
+        let SUMA = 0;
+        let MEDIANA;
+        let PROMEDIO;
+
+        document.write("<h2>SERIE del 2 al 400</h2>");
+
+        for(i =2; i<=400; i+=2){
+            SERIE.push(i);
+            document.write(i + " ");
+            SUMA +=i;
+        }
+
+        PROMEDIO = SUMA / SERIE.length;
+        document.write("<br>EL PROMEDIO ES:: " + PROMEDIO + "</br>");
+
+
+        let mitad = SERIE.length / 2;
+        if(SERIE.length % 2 === 0){
+            MEDIANA = (SERIE[mitad - 1] + SERIE[mitad]) / 2;
+        } else {
+            MEDIANA = SERIE[Math.floor(mitad)];
+        } 
+
+        document.write("La MEDIANA ES: " + MEDIANA + "<br>");
+
+        document.write("LA MODA ES: No hay moda");
+
+    </script>
+</body>
+</html>

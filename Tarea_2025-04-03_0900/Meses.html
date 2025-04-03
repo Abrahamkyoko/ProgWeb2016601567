@@ -1,0 +1,31 @@
+<html>
+<body>
+    <title>TAREA 1</title>
+    <h5> Nombre Salvador Ruiz Abraha, Boleta: 2016601567</h5>
+    <h1>Instrucciones: Mostrar en la página los 12 meses del año acompañado con su ordinal</h1>
+    <h2>Meses del año</h2>
+
+    <table border="5">
+        <thead>
+            <tr>
+                <th>Ordinal</th>
+                <th>Mes</th>
+            </tr>
+        </thead>
+        <tbody id="MESES"></tbody>
+    </table>
+
+    <script>
+        let mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+                     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        let Ordinal = ["1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°", "11°", "12°"];
+
+        let tabla = document.getElementById("MESES");
+
+        for (let i = 0; i < 12; i++) {
+            let fila = "<tr><td>" + Ordinal[i] + "</td><td>" + mes[i] + "</td></tr>";
+            tabla.innerHTML += fila;
+        }
+    </script>
+</body>
+</html>

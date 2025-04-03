@@ -1,0 +1,24 @@
+<html>
+<body>
+    <title>TAREA 2</title>
+    <h5> Nombre: Salvador Ruiz Abraha, Boleta: 2016601567</h5>
+    <h1>Crear un arreglo compuesto que incluya cadenas, numeros y booleanos.</h1>
+    <h2>Realizando proceso de los datos </h2>
+    <script>
+        let elementos = [25, "Praticando", false, 40, "Programacion", true, 15, "Web!!!!", false]; 
+        let total = 0;          
+        let cadena = "";        
+        let booleanoAND = true; 
+
+        elementos.forEach(elemento => {
+            typeof elemento === "number" ? total += elemento : 
+            typeof elemento === "string" ? cadena += elemento + " " : 
+            booleanoAND = booleanoAND && elemento;
+        });
+
+        document.write("<p>Suma total: " + total + "</p>");
+        document.write("<p>Cadena combinada: " + cadena + "</p>");
+        document.write("<p>AND de booleanos: " + booleanoAND + "</p>");
+    </script>
+</body>
+</html>

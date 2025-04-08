@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<title>  TAREA 2</title>
+<head>
+    <h2>Nombre: Salvador Ruiz Abraham Boleta 2016601567</h2>
+    <h2>TAREA 2</h2>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .calculadora {
+      margin: 20px;
+      text-align: left;
+    }
+
+    #display {
+      width: 210px;
+      height: 40px;
+      font-size: 18px;
+      text-align: right;
+      margin-bottom: 5px;
+    }
+
+    button {
+      width: 50px;
+      height: 50px;
+      margin: 2px;
+      font-size: 18px;
+    }
+
+    .igual {
+      width: 210px;
+    }
+  </style>
+
+  <script>
+    function btn_Click(val) {
+      const display = document.getElementById("display");
+      if (val === "=") {
+        display.value = eval(display.value);
+      } else if (val === "C") {
+        display.value = "";
+      } else {
+        display.value += val;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="calculadora">
+    <h2>Calculadora Aritmetica basica</h2>
+    <input id="display" readonly />
+
+    <br>
+
+    <button onclick="btn_Click('7')">7</button>
+    <button onclick="btn_Click('8')">8</button>
+    <button onclick="btn_Click('9')">9</button>
+    <button onclick="btn_Click('/')">/</button><br>
+
+    <button onclick="btn_Click('4')">4</button>
+    <button onclick="btn_Click('5')">5</button>
+    <button onclick="btn_Click('6')">6</button>
+    <button onclick="btn_Click('*')">*</button><br>
+
+    <button onclick="btn_Click('1')">1</button>
+    <button onclick="btn_Click('2')">2</button>
+    <button onclick="btn_Click('3')">3</button>
+    <button onclick="btn_Click('-')">-</button><br>
+
+    <button onclick="btn_Click('0')">0</button>
+    <button onclick="btn_Click('.')">.</button>
+    <button onclick="btn_Click('C')">C</button>
+    <button onclick="btn_Click('+')">+</button><br>
+
+    <button class="igual" onclick="btn_Click('=')">=</button>
+  </div>
+</body>
+</html>

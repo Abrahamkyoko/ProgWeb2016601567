@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <title>  TAREA 1</title>
+<head>
+
+    <h2>Nombre: Salvador Ruiz Abraham Boleta 2016601567</h2>
+    <h2>TAREA 1</h2>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      transition: background-color 0.3s;
+    }
+    .fila {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+    }
+    .tecla {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: lightgray;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <h1>Presiona una tecla</h1>
+
+  <div class="fila">
+    <div id="w" class="tecla">W</div>
+  </div>
+  <div class="fila">
+    <div id="a" class="tecla">A</div>
+    <div id="s" class="tecla">S</div>
+    <div id="d" class="tecla">D</div>
+  </div>
+  <div class="fila">
+    <div id="z" class="tecla">Z</div>
+    <div id="x" class="tecla">X</div>
+  </div>
+
+  <script>
+    const colores = {
+      w: "blue",
+      a: "skyblue",
+      s: "green",
+      d: "black",
+      z: "red",
+      x: "silver"
+    };
+
+    document.addEventListener("keydown", e => {
+      const tecla = e.key.toLowerCase();
+      const div = document.getElementById(tecla);
+      if (div && colores[tecla]) {
+        div.style.backgroundColor = colores[tecla];
+        document.body.style.backgroundColor = colores[tecla];
+      }
+    });
+
+    document.addEventListener("keyup", e => {
+      const tecla = e.key.toLowerCase();
+      const div = document.getElementById(tecla);
+      if (div) {
+        div.style.backgroundColor = "lightgray";
+        document.body.style.backgroundColor = "white";
+      }
+    });
+  </script>
+</body>
+</html>
